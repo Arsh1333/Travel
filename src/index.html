@@ -11,7 +11,7 @@
         class="bg-[url('./assets/Hero Section.png') p-[100px]] bg-cover h-screen"
         style="background-image: url(../assets/Hero_Section.png)"
       >
-        <nav>
+        <!-- <nav>
           <div class="menu-item"></div>
           <ul
             class="flex text-[20px] font-rubik p-[32px] items-center text-white cursor-pointer justify-between"
@@ -33,7 +33,96 @@
               Sign Up
             </button>
           </ul>
+        </nav> -->
+        <nav class="bg-transparent p-4">
+          <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="menu-item">
+              <img src="../assets/Logo.png" alt="Logo" />
+            </div>
+
+            <!-- Hamburger Icon for Mobile -->
+            <div class="lg:hidden">
+              <button
+                id="mobile-menu-button"
+                class="text-white focus:outline-none focus:ring-2 focus:ring-[#ff7757]"
+              >
+                <!-- Hamburger Icon -->
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Menu (Hidden on Mobile, Visible on Larger Screens) -->
+            <ul
+              class="hidden lg:flex text-[20px] font-rubik items-center text-white cursor-pointer space-x-8"
+            >
+              <li><a href="#" class="pl-[32px]">Home</a></li>
+              <li><a href="#">Explore</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Pricing</a></li>
+
+              <!-- Buttons -->
+              <li>
+                <button
+                  class="block pt-[10px] pl-[20px] pb-[10px] pr-[20px] rounded-xl hover:bg-[#ff7757] transition duration-300"
+                >
+                  Login
+                </button>
+              </li>
+              <li>
+                <button
+                  class="block pt-[10px] pl-[20px] pb-[10px] pr-[20px] rounded-[12px] bg-[#ff7757] hover:bg-[#ff593e] transition duration-300"
+                >
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mobile Menu (Visible on Small Screens) -->
+          <div id="mobile-menu" class="lg:hidden hidden">
+            <ul
+              class="text-[20px] font-rubik flex flex-col items-center bg-[#172432] space-y-4 p-4"
+            >
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Explore</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Pricing</a></li>
+
+              <!-- Buttons -->
+              <li>
+                <button
+                  class="block pt-[10px] pl-[20px] pb-[10px] pr-[20px] rounded-xl hover:bg-[#ff7757] transition duration-300"
+                >
+                  Login
+                </button>
+              </li>
+              <li>
+                <button
+                  class="block pt-[10px] pl-[20px] pb-[10px] pr-[20px] rounded-[12px] bg-[#ff7757] hover:bg-[#ff593e] transition duration-300"
+                >
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
         </nav>
+
         <div class="min-h-full pt-[72px] pb-[120px] pl-[32px]">
           <h1
             class="text-white text-[64px] w-[75%] font-playfair pb-[16px] leading-[85px]"
@@ -46,7 +135,7 @@
         </div>
         <div></div>
       </section>
-      <section class="pt-[100px] pl-[32px] text-[#172432] flex">
+      <!-- <section class="pt-[100px] pl-[32px] text-[#172432] flex">
         <div>
           <h1 class="pb-[20px] text-[64px]">Popular Destinations</h1>
           <p class="font-rubik text-[24px] text-[#767E86]">
@@ -78,8 +167,71 @@
           <img src="../assets/Col-block (2).png" alt="" />
         </div>
       </div>
+    </div> -->
+      <section
+        class="pt-[40px] lg:pt-[100px] px-[16px] lg:px-[32px] text-[#172432] flex flex-col lg:flex-row items-start lg:items-center"
+      >
+        <div>
+          <h1 class="pb-[10px] lg:pb-[20px] text-[32px] lg:text-[64px]">
+            Popular Destinations
+          </h1>
+          <p class="font-rubik text-[18px] lg:text-[24px] text-[#767E86]">
+            Most popular destinations around the world, from historical places
+            to natural wonders.
+          </p>
+        </div>
+        <div>
+          <img
+            class="p-[20px] lg:p-[100px]"
+            src="../assets/Arrow.png"
+            alt="Arrow"
+          />
+        </div>
+      </section>
+
+      <!-- Image Grid for Destinations -->
+      <div
+        class="flex flex-col lg:flex-row justify-around ml-[32px] lg:ml-0 space-y-6 lg:space-y-0 lg:space-x-6"
+      >
+        <div class="one relative">
+          <div
+            class="img-bl absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-[10px] lg:p-[17px] z-10"
+          >
+            Monument of Berlin
+          </div>
+          <img
+            class="w-full h-auto lg:w-[350px]"
+            src="../assets/Col-block.png"
+            alt="Monument of Berlin"
+          />
+        </div>
+        <div class="two relative">
+          <div
+            class="img-bl absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-[10px] lg:p-[17px] z-10"
+          >
+            Millenium Bridge
+          </div>
+          <img
+            class="w-full h-auto lg:w-[350px]"
+            src="../assets/Col-block (1).png"
+            alt="Millenium Bridge"
+          />
+        </div>
+        <div class="three relative">
+          <div
+            class="img-bl absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-[10px] lg:p-[17px] z-10"
+          >
+            Rialto Bridge
+          </div>
+          <img
+            class="w-full h-auto lg:w-[350px]"
+            src="../assets/Col-block (2).png"
+            alt="Rialto Bridge"
+          />
+        </div>
+      </div>
     </div>
-    <section class="pt-[100px] pl-[32px] text-[#172432]">
+    <!-- <section class="pt-[100px] pl-[32px] text-[#172432]">
       <h1 class="pb-[20px] text-[64px]">Our Blog</h1>
       <div class="bg-[#ff7757] h-[3px] mb-[24px] w-[150px]"></div>
       <p class="font-rubik text-[24px] text-[#767E86]">
@@ -102,7 +254,50 @@
           anyone who loves or pursues.
         </p>
       </div>
+    </div> -->
+    <section
+      class="pt-[40px] lg:pt-[100px] px-[16px] lg:pl-[32px] text-[#172432]"
+    >
+      <h1 class="pb-[10px] lg:pb-[20px] text-[32px] lg:text-[64px]">
+        Our Blog
+      </h1>
+      <div
+        class="bg-[#ff7757] h-[3px] mb-[12px] lg:mb-[24px] w-[100px] lg:w-[150px]"
+      ></div>
+      <p class="font-rubik text-[18px] lg:text-[24px] text-[#767E86]">
+        An insight into the incredible experience in the world
+      </p>
+    </section>
+
+    <!-- Blog Post Content -->
+    <div
+      class="flex flex-col lg:flex-row justify-between m-[16px] lg:m-[32px] space-y-6 lg:space-y-0"
+    >
+      <!-- Image for small screens on top, large screens on the side -->
+      <img
+        class="w-full lg:w-[50%] h-auto"
+        src="../assets/Col-block (3).png"
+        alt="Beautiful Italy"
+      />
+
+      <!-- Blog text content -->
+      <div class="text-cont p-[16px] lg:p-[32px]">
+        <h1 class="text-[28px] lg:text-[54px] w-full lg:w-[75%]">
+          Beautiful Italy, Let’s Travel
+        </h1>
+        <p class="font-rubik text-[18px] lg:text-[24px] text-[#174352]">
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I will give you a complete
+          account of the system and expound the actual teachings of the great
+          explorer of the truth, the master-builder of human happiness. No one
+          rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+          but because those who do not know how to pursue pleasure rationally
+          encounter consequences that are extremely painful. Nor again is there
+          anyone who loves or pursues.
+        </p>
+      </div>
     </div>
+
     <section class="pt-[100px] pl-[32px] text-[#172432]">
       <h1 class="pb-[20px] text-[64px]">Traveler’s Experiences</h1>
       <div class="bg-[#ff7757] h-[3px] mb-[24px] w-[350px]"></div>
@@ -110,7 +305,7 @@
         Here some awesome feedback from our travelers
       </p>
     </section>
-    <div class="flex p-[32px] justify-between space-x-5">
+    <!-- <div class="flex p-[32px] justify-between space-x-5">
       <div class="rounded-xl bg-[#f5f6f7]">
         <img class="-top-28 ml-[30px]" src="../assets/Avatar (2).png" alt="" />
         <p class="font-rubik m-[30px] text-[24px] text-[#4f5256]">
@@ -146,9 +341,86 @@
           Tamara Bellis
         </h1>
       </div>
-    </div>
+    </div> -->
     <div
-      class="flex shadow-2xl border-gray-500 rounded-xl border-2 m-[30px] absolute bottom-[-3100px] z-10 bg-white"
+      class="flex flex-col lg:flex-row p-[16px] lg:p-[32px] lg:justify-between space-y-5 lg:space-x-5 lg:space-y-0"
+    >
+      <!-- Card 1 -->
+      <div class="rounded-xl bg-[#f5f6f7] flex-1">
+        <img class="-top-28 ml-[30px]" src="../assets/Avatar (2).png" alt="" />
+        <p
+          class="font-rubik m-[20px] lg:m-[30px] text-[18px] lg:text-[24px] text-[#4f5256]"
+        >
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I will give you a complete
+          account of the system and expound the actual teachings of the great
+          explorer of the truth, the master- builder of human happiness.
+        </p>
+        <h1
+          class="pb-[20px] m-[20px] lg:m-[34px] text-[18px] lg:text-[24px] text-[#767e86]"
+        >
+          John Doe
+        </h1>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="rounded-xl bg-[#f5f6f7] flex-1">
+        <img class="-top-28 ml-[30px]" src="../assets/Avatar (1).png" alt="" />
+        <p
+          class="font-rubik m-[20px] lg:m-[30px] text-[18px] lg:text-[24px] text-[#4f5256]"
+        >
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I will give you a complete
+          account of the system and expound the actual teachings of the great
+          explorer of the truth, the master- builder of human happiness.
+        </p>
+        <h1
+          class="pb-[20px] m-[20px] lg:m-[34px] text-[18px] lg:text-[24px] text-[#767e86]"
+        >
+          John Smith
+        </h1>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[#f5f6f7] rounded-xl flex-1">
+        <img class="mb-[30px] ml-[30px]" src="../assets/Avatar.png" alt="" />
+        <p
+          class="font-rubik m-[20px] lg:m-[30px] text-[18px] lg:text-[24px] text-[#4f5256]"
+        >
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I will give you a complete
+          account of the system and expound the actual teachings of the great
+          explorer of the truth, the master- builder of human happiness.
+        </p>
+        <h1
+          class="pb-[20px] m-[20px] lg:m-[34px] text-[18px] lg:text-[24px] text-[#767e86]"
+        >
+          Tamara Bellis
+        </h1>
+      </div>
+    </div>
+
+    <!-- <div
+      class="flex shadow-2xl border-gray-500 rounded-xl border-2 m-[30px] absolute bottom-[-3000px] z-10 bg-white"
+    >
+      <h1 class="pb-[20px] m-[34px] text-[64px] text-[#767e86]">
+        Our Newsletter
+      </h1>
+      <div class="m-[55px]">
+        <input
+          class="bg-[#ffe8d4] pt-[16px] pr-[20px] placeholder-[#ff7757] p-[10px] rounded-lg"
+          placeholder="Enter your name"
+          type="text"
+        />
+        <button
+          class="ml-[40px] bg-[#ff7757] pt-[16px] pr-[40px] pl-[40px] pb-[16px] rounded-xl text-white"
+        >
+          Subscribe
+        </button>
+      </div>
+    </div> -->
+    <div
+      class="flex shadow-2xl border-gray-500 rounded-xl border-2 m-[30px] absolute bottom-[-3000px] z-10 bg-white hidden lg:flex"
     >
       <h1 class="pb-[20px] m-[34px] text-[64px] text-[#767e86]">
         Our Newsletter
@@ -168,7 +440,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="mt-[100px] bg-[#172432] h-[300px] w-[100%] text-white">
+    <!-- <div class="mt-[100px] bg-[#172432] h-[300px] w-[100%] text-white">
       i
       <div class="flex m-[100px] mt-[120px] ml-[32px]">
         <div class="logo"><img src="../assets/Logo.png" alt="" /></div>
@@ -191,6 +463,41 @@
           <p>New YOrk , USA</p>
         </div>
       </div>
+    </div> -->
+    <div class="mt-[100px] bg-[#172432] h-auto lg:h-[300px] w-full text-white">
+      <div
+        class="flex flex-col lg:flex-row lg:m-[100px] mt-[80px] lg:mt-[120px] ml-[20px] lg:ml-[32px] space-y-8 lg:space-y-0 lg:space-x-12 mt-[200px]"
+      >
+        <!-- Logo Section -->
+        <div class="logo mb-4 lg:mb-0">
+          <img src="../assets/Logo.png" alt="Logo" />
+        </div>
+
+        <!-- Menu Section -->
+        <div class="menu text-[16px] lg:text-[20px]">
+          <p class="font-bold">Menu</p>
+          <p>Home</p>
+          <p>Explore</p>
+          <p>Travel</p>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info text-[16px] lg:text-[20px]">
+          <p class="font-bold">Information</p>
+          <p>Designations</p>
+          <p>Terms</p>
+          <p>Privacy</p>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact text-[16px] lg:text-[20px]">
+          <p class="font-bold">Contact Info</p>
+          <p>+123 454567893</p>
+          <p>haha@haha.com</p>
+          <p>New York, USA</p>
+        </div>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
